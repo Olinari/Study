@@ -1,5 +1,4 @@
-//Asignment : Find the most frequent item in an array
-
+//Asignment : One Edit Away
 const testedArray = ["C", "D", "B", "Z", "B", "C", "T"]; //A
 let hashTable = {};
 var mostFrequent = [null, null];
@@ -12,7 +11,7 @@ function calculate() {
     } else {
       hashTable[item] = 1;
     }
-    if (mostFrequent[1] < hashTable[item] || mostFrequent[1] == null) {
+    if (mostFrequent[1] < hashTable[item] || mostFrequent[1] === null) {
       mostFrequent = [item, hashTable[item]];
     }
   });

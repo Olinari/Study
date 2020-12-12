@@ -1,4 +1,4 @@
-//Asingment : Find the first Reaccuring item in an Array
+//Asignment : Find the first Reaccuring item in an Array
 
 const testedArray = ["C", "D", "F", "F", "D", "A", "A"];
 let hashTable = {};
