@@ -1,25 +1,24 @@
-//Asingment : Find The first NON reacurring item in a string
+//Asingment : Determine wheather two strings are "One Edit Away"
 
-const testedString = "xyyxg"; //c
+const originString = "xyyxfg";
+const testedString = "xgggfg"; //yes
 
 //My Solution
 
-function calculate() {
-  let hash = {};
-  let result = testedString;
+var count = 0;
 
-  for (i = 0; i < testedString.length; i++) {
-    item = testedString[i];
-    if (hash[item]) {
-      delete hash[item];
-    } else {
-      hash[item] = 1;
-      result = item;
+function calculate() {
+  for (i = 0; i < originString.length; i++) {
+    if (testedString[i] != originString[i]) {
+      count++;
+    }
+    if (count > 1) {
+      return false;
     }
   }
-
-  return hash;
+  return count === 1 ? true : false;
 }
 
 finalResult = calculate();
-console.log(Object.keys(finalResult)[0] || null);
+console.log(finalResult);
+//console.log(Object.keys(finalResult)[0] || null);
