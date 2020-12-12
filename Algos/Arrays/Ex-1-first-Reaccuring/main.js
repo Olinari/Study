@@ -6,13 +6,13 @@ let hashTable = {};
 
 function calculate() {
   var result = false;
-  for (i = 0; i < testedArray.length; i++) {
-    if (hashTable[testedArray[i]]) {
-      result = testedArray[i];
+  testedArray.forEach((item) => {
+    if (hashTable[item]) {
+      result = item;
       return result;
     }
-    hashTable[testedArray[i]] = 1;
-  }
+    hashTable[item] = 1;
+  });
   return result;
 }
 
