@@ -1,0 +1,72 @@
+#shula {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 0px 0px black;
+  width: fit-content;
+  height: auto;
+}
+
+#shula [type="row"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: fit-content;
+  box-shadow: -1px -1px 0px 0px black;
+}
+.square {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: help;
+
+  box-shadow: -1px -1px 0px 0px black;
+
+  width: 60px;
+  height: 60px;
+}
+.secret {
+  display: none;
+  pointer-events: none;
+}
+.secret.reveal {
+  display: unset;
+  pointer-events: none;
+}
+.flag {
+  width: 20px;
+  opacity: 0;
+  filter: invert(46%) sepia(68%) saturate(2384%) hue-rotate(200deg)
+    brightness(95%) contrast(101%);
+  transform: translate(-15px, 15px);
+  cursor: pointer;
+  transition: filter 0.3s ease-in-out;
+  position: absolute;
+}
+.square:hover .flag:not(.show) {
+  width: 20px;
+  opacity: 1;
+}
+
+.flag.show:hover {
+  width: 20px;
+  opacity: 1;
+}
+.flag:hover {
+  filter: invert(24%) sepia(67%) saturate(5112%) hue-rotate(320deg)
+    brightness(87%) contrast(135%);
+}
+.flag.show {
+  opacity: 1;
+  filter: invert(24%) sepia(67%) saturate(5112%) hue-rotate(320deg)
+    brightness(87%) contrast(135%);
+}
+.flag.show:hover {
+  cursor: not-allowed;
+  filter: invert(24%) sepia(67%) saturate(5112%) hue-rotate(320deg)
+    brightness(87%) contrast(135%);
+}
+.flag.hide {
+  filter: invert(24%) sepia(67%) saturate(0%) hue-rotate(320deg) brightness(92%)
+    contrast(135%);
+}

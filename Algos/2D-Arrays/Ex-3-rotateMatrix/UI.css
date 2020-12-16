@@ -1,0 +1,36 @@
+.shula {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 0px 0px black;
+  width: fit-content;
+  height: auto;
+  margin-left: 30px;
+}
+
+.shula [type="row"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: fit-content;
+  box-shadow: 1px -1px 0px 0px black;
+}
+.square {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  box-shadow: -1px -1px 0px 0px black;
+  box-sizing: content-box;
+
+  width: 60px;
+  height: 60px;
+}
+.secret {
+  display: none;
+  pointer-events: none;
+}
+.secret.reveal {
+  display: unset;
+  pointer-events: none;
+}
